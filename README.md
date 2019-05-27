@@ -1,14 +1,16 @@
-# flask_demo
+# Flask Web App Demo
 
-installed plugins:
+Installed plugins:
+```
 # flask core
 pip install Flask
 # flask wtforms
 pip install Flask-WTF
 # flask SQLAlchemy
 pip install flask-sqlalchemy
+```
 
-to create the database and tables one time you can execute this lines:
+P.S. In order to create the database and tables one time you can execute this lines:
 ```
 from flaskblog import db
 db.create_all()
@@ -17,6 +19,7 @@ you can also access ```engine.dialect.has_table(engine, Variable_tableName)``` a
 https://stackoverflow.com/questions/33053241/sqlalchemy-if-table-does-not-exist/33054597
 
 SQLAlchemy usage example:
+```
 >>> from flaskblog.models import User, Post
 >>> User.query.all()
 []
@@ -62,7 +65,7 @@ User('admin', 'admin@demo.com', 'default.jpg')
 >>> db.drop_all()
 >>> # recreate everything
 >>> db.create_all()
+```
 
-
-# Tutorial by Corey
+# Tutorial by Corey Schafer
 https://www.youtube.com/watch?v=CSHx6eCkmv0&list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH&index=6
