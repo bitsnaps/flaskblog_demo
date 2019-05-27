@@ -1,11 +1,7 @@
-from flask import Flask, render_template as render, flash, redirect, url_for
-from forms import RegistrationForm, LoginForm
-
-app = Flask(__name__)
-
-# created for wtforms
-# got from: python -c "import secrets; print(secrets.token_hex(16))"
-app.config['SECRET_KEY'] = 'adc83dfe8f2d9416faccfca86a66d263'
+from flask import render_template as render, flash, redirect, url_for
+from flaskblog import app
+from flaskblog.forms import RegistrationForm, LoginForm
+from flaskblog.models import User, Post
 
 posts = [
     {
@@ -52,14 +48,3 @@ def login():
         else:
             flash('Login Unsuccessfull. Please check your username and password', 'danger')
     return render('login.html', title="Login", form=form)
-
-
-# this allows you to run the app without "flask run"
-# you can just type: "python flaskblog.py"
-if __name__ == '__main__':
-    app.run(debug=True)
-
-# run in dev mode:
-#export FLASK_ENV=development
-
-# https://www.youtube.com/watch?v=UIJKdCIEXUQ&list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH&index=3

@@ -1,10 +1,12 @@
 ### Flask ###
+site.db
 instance/*
 !instance/.gitignore
 .webassets-cache
 
 ### Flask.Python Stack ###
 # Byte-compiled / optimized / DLL files
+flaskblog/__pycache__
 __pycache__/
 *.py[cod]
 *$py.class
