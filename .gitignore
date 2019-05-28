@@ -1,4 +1,5 @@
 ### Flask ###
+accounts.txt
 site.db
 instance/*
 !instance/.gitignore

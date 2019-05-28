@@ -8,9 +8,18 @@ pip install Flask
 pip install Flask-WTF
 # flask SQLAlchemy
 pip install flask-sqlalchemy
-```
+# flask bcrypt
+pip install flask-bcrypt
+# or
+# easy_install flask-bcrypt
+# conda install -c conda-forge flask-bcrypt
+# Flask Login
+pip install flask-login
 
-P.S. In order to create the database and tables one time you can execute this lines:
+```
+Notes:
+- If you're using conda use ```conda install PACKAGE_NAME``` instead of ```pip install PACKAGE_NAME```
+- In order to create the database and tables one time you can execute this lines:
 ```
 from flaskblog import db
 db.create_all()
@@ -67,5 +76,24 @@ User('admin', 'admin@demo.com', 'default.jpg')
 >>> db.create_all()
 ```
 
+Flask BCrypt usage example:
+```
+>>> from flask_bcrypt import Bcrypt
+>>> b = Bcrypt()
+>>> b.generate_password_hash('hello') # gets hash in bytes
+b'$2b$12$ytOK4rsGCjP3G/C8cBby5OQ6U0szXeRQ.kwo5CwvelaxNzINFDoLq'
+>>> b.generate_password_hash('hello').decode('utf-8')
+'$2b$12$O8H3GqZwXMKANIfUR5wcROc8E1.Tehv7rvdIeb3yn89JUAmbkAF5.'
+>>> b.generate_password_hash('hello').decode('utf-8') # different hash for each generation
+'$2b$12$mTGKgmeOEBWk8d23VgeZ2ushBIPz.96MqRaqYv0rT7oCgczQPpD6K'
+>>> h=b.generate_password_hash('hello').decode('utf-8')
+>>> h
+'$2b$12$Dme7sAWexBB8iI0T/l3QJe1sXlBiKe7SpUYqaZkuV2KwpSJP8NtCa'
+>>> b.check_password_hash(h, '1hello') # Wrong password check
+False
+>>> b.check_password_hash(h, 'hello') # Correct password check
+True
+```
+
 # Tutorial by Corey Schafer
-https://www.youtube.com/watch?v=CSHx6eCkmv0&list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH&index=6
+https://www.youtube.com/watch?v=803Ei2Sq-Zs&list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH&index=7
