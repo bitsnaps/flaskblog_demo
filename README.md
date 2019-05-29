@@ -15,6 +15,8 @@ pip install flask-bcrypt
 # conda install -c conda-forge flask-bcrypt
 # Flask Login
 pip install flask-login
+# Pillow to resize image
+pip install Pillow
 
 ```
 Notes:
@@ -96,4 +98,4 @@ True
 ```
 
 # Tutorial by Corey Schafer
-https://www.youtube.com/watch?v=803Ei2Sq-Zs&list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH&index=7
+https://www.youtube.com/watch?v=u0oDDZrDz9U&list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH&index=8
