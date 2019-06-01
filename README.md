@@ -118,4 +118,4 @@ itsdangerous.exc.SignatureExpired: Signature expired
 ```
 
 # Tutorial by Corey Schafer
-https://www.youtube.com/watch?v=Wfx4YBzg16s&list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH&index=11
+https://www.youtube.com/watch?v=uVNfQDohYNI&list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH&index=12
