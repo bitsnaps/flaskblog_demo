@@ -17,6 +17,8 @@ pip install flask-bcrypt
 pip install flask-login
 # Pillow to resize image
 pip install Pillow
+# Flask Email
+pip install flask-mail
 
 ```
 Notes:
@@ -97,5 +99,23 @@ False
 True
 ```
 
+Using itsdangerous ecryption library
+```
+>>> from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
+>>> s = Serializer('secret', 30) # 30 is an expiration time in seconds
+>>> token = s.dumps({'user_id':1}).decode('utf-8')
+>>> token
+'eyJhbGciOiJIUzUxMiIsImlhdCI6MTU1OTM4NTY1MywiZXhwIjoxNTU5Mzg1NjgzfQ.eyJ1c2VyX2lkIjoxfQ.aGoobkmjf4mz2lAUDZ1jYa6tLOoxEx1gt7PnpW7RY8
+EaBUpDaJ1rCokyXBmE_TZI3XiJ0IP1aFY5ocZrjOU5oA'
+>>> s.loads(token) # check if token is valid
+{'user_id': 1}
+>>> s.loads(token) # token is expired
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/miniconda2/envs/py3/lib/python3.7/site-packages/itsdangerous/jws.py", line 205, in loads
+    date_signed=self.get_issue_date(header),
+itsdangerous.exc.SignatureExpired: Signature expired
+```
+
 # Tutorial by Corey Schafer
-https://www.youtube.com/watch?v=PSWf2TjTGNY&list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH&index=9
+https://www.youtube.com/watch?v=Wfx4YBzg16s&list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH&index=11
