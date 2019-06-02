@@ -116,6 +116,10 @@ Traceback (most recent call last):
     date_signed=self.get_issue_date(header),
 itsdangerous.exc.SignatureExpired: Signature expired
 ```
+Test the app:
+```
+python test.py -v
+```
 
 # Tutorial by Corey Schafer
 https://www.youtube.com/watch?v=uVNfQDohYNI&list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH&index=12
