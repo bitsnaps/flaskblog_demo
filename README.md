@@ -19,7 +19,10 @@ pip install flask-login
 pip install Pillow
 # Flask Email
 pip install flask-mail
-
+# Testing with Flask
+pip install pytest
+# needed for hosting
+# pip install gunicorn
 ```
 Notes:
 - If you're using conda use ```conda install PACKAGE_NAME``` instead of ```pip install PACKAGE_NAME```
@@ -121,5 +124,5 @@ Test the app:
 python test.py -v
 ```
 
-# Tutorial by Corey Schafer
-https://www.youtube.com/watch?v=uVNfQDohYNI&list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH&index=12
+# Tutorial by Corey Schafer (Deploy on Linux Server)
+https://www.youtube.com/watch?v=goToXTC96Co&list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH&index=13

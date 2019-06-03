@@ -54,10 +54,3 @@ def delete_post(post_id):
     db.session.commit()
     flash('Your post has been deleted!', 'success')
     return redirect(url_for('main.home'))
-
-@posts.route("/search_post", methods=['GET'])
-def search_post():
-    search = request.args.get('search')
-    if search is None:
-        return redirect(url_for('main.home'))
-    return redirect(url_for('main.home', search=search))

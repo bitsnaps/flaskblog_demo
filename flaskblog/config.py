@@ -1,6 +1,12 @@
 import os
+import json
+
+# for configuration on Linux Server
+# with open('/etc/config.json') as config_file:
+#     config = json.load(config_file)
 
 # Those can be store to your environnement variables
+# or json config file from Linux Server e.g. config.get('SQLALCHEMY_DATABASE_URI')
 class Config():
     # defined with a relative path from local file
     SQLALCHEMY_DATABASE_URI='sqlite:///site.db'
