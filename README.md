@@ -124,5 +124,5 @@ Test the app:
 python test.py -v
 ```
 
-# Tutorial by Corey Schafer (Deploy on Linux Server)
-https://www.youtube.com/watch?v=goToXTC96Co&list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH&index=13
+# Tutorial by Corey Schafer
+https://www.youtube.com/playlist?list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH
