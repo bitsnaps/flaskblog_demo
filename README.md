@@ -102,7 +102,7 @@ False
 True
 ```
 
-Using itsdangerous ecryption library
+Using `itsdangerous` ecryption library
 ```
 >>> from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
 >>> s = Serializer('secret', 30) # 30 is an expiration time in seconds
