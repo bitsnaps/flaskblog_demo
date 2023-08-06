@@ -1,4 +1,4 @@
-from flaskblog import create_app
+from flaskblog import create_app, db
 
 # Used to inject debug to templates (http://flask.pocoo.org/docs/1.0/templating/#context-processors)
 # @app.context_processor
@@ -10,6 +10,8 @@ app = create_app()
 # this allows you to run the app without "flask run"
 # you can just type: "python flaskblog.py"
 if __name__ == '__main__':
+    with app.app_context():
+        db.create_all()
     app.run(debug=True)
 
 # run in dev mode:
